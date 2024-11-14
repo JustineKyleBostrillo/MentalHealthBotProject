@@ -1,0 +1,86 @@
+{
+    "Name": "Wellness 360",
+    "RootLink": "https://wellness360.uthealthsa.org/wellness-360-at-utsa/",
+    "Description": "On-campus health care for UTSA students is provided by UT Health San Antonio Wellness 360. Our health care team is led by Advanced Practice Registered Nurses who hold the highest level degrees for nursing practice, master’s and doctoral degrees. Call 210-458-4142 to schedule an appointment.",
+    "Services": [
+        {
+            "service_name": "Primary care services (e.g. cold, headache, sore throat, etc.)"
+        },
+        {
+            "service_name": "First Aid"
+        },
+        {
+            "service_name": "Prescriptions"
+        },
+        {
+            "service_name": "Health screening"
+        },
+        {
+            "service_name": "Immunizations / Vaccinations and Flu Shots"
+        },
+        {
+            "service_name": "Drug and Alcohol prevention"
+        },
+        {
+            "service_name": "Acute care (sprains, cuts)"
+        },
+        {
+            "service_name": "Chronic Conditions (such as Asthma)"
+        },
+        {
+            "service_name": "Health &Wellness Programs (such as health education and prevention)"
+        },
+        {
+            "service_name": "Information/literature on Health Topics"
+        },
+        {
+            "service_name": "Behavioral health (such as smoking cessation)"
+        }, 
+        {
+            "service_name": "Referral information"
+        },
+        {
+            "service_name": "Routine Health Assessments"
+        },
+        {
+            "service_name": "Screenings and Screening Events"
+        },
+        {
+            "service_name": "Diagnostic Urinalysis"
+        },
+        {
+            "service_name": "Diagnostic Bloodwork"
+        },
+        {
+            "service_name": "Comprehensive Women’s Health (such as pap smears, pregnancy testing, birth control and overall health)"
+        },
+        {
+            "service_name": "LGBTQ+ Health Care Services"
+        },
+        {
+            "service_name": "PrEP/PEP"
+        },
+        {
+            "service_name": "HIV Testing"
+        },
+        {
+            "service_name": "Sexually-Transmitted Infection (STI) Testing and Treatment"
+        },
+        {
+            "service_name": "Infectious Disease Consultation"
+        },
+        {
+            "service_name": "Nutrition / Fitness Education and Counseling"
+        },
+        {
+            "service_name": "Mental Health"
+        }
+    ],
+    "ContactNumber": "210-458-4142",
+    "ContactEmail:": "wellbeing.education@utsa.edu",
+    "OfficeHours": [
+        {"weekdays": "8:00am - 5:00pm"},
+        {"weekends": "Closed"}
+    ],
+    "CampusLocation": "Recreation and Wellness Center, 1.500. One UTSA Circle, San Antonio, TX 78249"
+}

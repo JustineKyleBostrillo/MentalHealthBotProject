@@ -1,0 +1,34 @@
+{
+    "Name": "Recovery Support Services",
+    "RootLink": "https://www.utsa.edu/students/wellbeing/services/recovery.html",
+    "Description": "The Recovery Center offers students recovering from substance use disorders and/or other behavioral addictions the environment necessary to maintain your recovery while receiving your education. We provide support meetings, physical lounge/community room, a supportive community, one on one services, plus a few other perks.",
+    "Services": [
+        {
+            "service_name": "Community Approach",
+            "description": "We believe recovery is a deeply personal process and therefore, we respect all recovery paths. We are a community that respects and celebrates all races, ethnicities, cultures, religions, beliefs, sexualities, genders, life circumstances or experiences. In this community, we grow together."
+        },
+        {
+            "service_name": "Recovery Lounge",
+            "description": "Find your home on campus in our Recovery Lounge where you can relax, study, hang out, or grab some coffee, snacks and other refreshments. During recovery support meetings, open to meeting attendees only."
+        },
+        {
+            "service_name": "Sober social activities",
+            "description": "Engaging in social connection is crucial to recovery. Social activities include sober tailgates, bowling nights, game nights, etc."
+        },
+        {
+            "service_name": "Recovery counseling/coaching",
+            "description": "Maintaining recovery can be challenging on its own. Maintaining recovery while in college, even more so. Students in recovery can request to meet with CCR’s licensed staff to help maintain recovery through short term individual counseling based on student needs."
+        },
+        {
+            "service_name": "Recovery Support Groups",
+            "description": "See Link For More Information And Schedule"
+        }
+    ],
+    "ContactNumber": "210-458-4142",
+    "ContactEmail:": "wellbeing.education@utsa.edu",
+    "OfficeHours": [
+        {"weekdays": "8:00am - 5:00pm"},
+        {"weekends": "Closed"}
+    ],
+    "CampusLocation": "Recreation Wellness Center (RWC) 1.810. Main Campus. 1 UTSA Circle. San Antonio, TX 78249"
+}
