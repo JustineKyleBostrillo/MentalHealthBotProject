@@ -1,0 +1,11 @@
+[project]
+name = "MentalHealthBot"
+version = "v1"
+dependencies = ["openai", "requests"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["scheduleParser"]

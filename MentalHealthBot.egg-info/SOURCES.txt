@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+MentalHealthBot.egg-info/PKG-INFO
+MentalHealthBot.egg-info/SOURCES.txt
+MentalHealthBot.egg-info/dependency_links.txt
+MentalHealthBot.egg-info/requires.txt
+MentalHealthBot.egg-info/top_level.txt

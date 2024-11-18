@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: MentalHealthBot
+Version: 1
+Requires-Dist: openai
+Requires-Dist: requests
+Requires-Dist: datetime
+Requires-Dist: beautifulsoup4
