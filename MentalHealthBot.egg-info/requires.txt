@@ -1,4 +1,2 @@
 openai
 requests
-datetime
-beautifulsoup4
