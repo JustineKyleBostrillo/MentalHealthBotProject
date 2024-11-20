@@ -1,0 +1,10 @@
+{
+    "dataFileFolder": "dataFiles",
+    "openAIFolder": "openAI",
+
+
+    "mainPythonFile": "main.py",
+
+    "EpensiveMode": false,
+    "ExtraInstructionForExpensiveMode": ""
+}

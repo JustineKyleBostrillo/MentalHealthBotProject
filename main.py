@@ -1,15 +1,18 @@
-import json
 import datetime
+import json
+from openAI import AI
+
+
 from modules import parseUserInput
 from modules import menu
 from modules import clearConsole
-from openAI import AI
+
 
 
 date = datetime.datetime.now()
 
 
-# The name of the parser and the prefferedName of the user
+# The name of the parser and the preferredName of the user
 parserName = "Apollo"
 userName = input(f"{parserName}: Hello there beautiful stranger, who may I refer you as? ")
 
@@ -33,10 +36,12 @@ while(choice != 5):
         menu.printMenu()
         choice = int(input(f"{userName}: "))
     except:
-        print(f"{parserName}: Invalid choice. Please input a valid integer in the range (0 - 6).")
+        print(f"{parserName}: Invalid choice. Please input a valid integer in the range (0 - 4).")
     
     match(choice):
         case 1:
             parseUserInput.parseInput(parserName,choice)
+        case 5:
+            print(f"{parserName}: Goodbye, {userName}, See you later!")
         case _:
             print(f"{parserName}: Not in the valid range, please try again")

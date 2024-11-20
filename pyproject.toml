@@ -1,7 +1,7 @@
 [project]
 name = "MentalHealthBot"
 version = "v1"
-dependencies = ["openai", "pathlib", "os", "requests", "json", "sys", "date"]
+dependencies = ["openai","importlib", "pathlib", "os", "requests", "json", "sys", "date"]
 
 [build-system]
 requires = ["setuptools"]

@@ -4,9 +4,13 @@ import json
 import pathlib
 import sys
 
+
 # Gets the root directory of the project as well as where all the json files are (In dataFiles directory)
 rootDir = pathlib.Path(__file__).parents[1]
-dataFiles = rootDir/"dataFiles"
+
+with open(rootDir/"config.json", "r") as file:
+    config = json.load(file)
+dataFiles = rootDir/config["dataFileFolder"]
 
 parserName = "Julius"
 userName = "Ungas"
@@ -31,7 +35,7 @@ def parseInput(parserName, choice):
                 except:
                     print(f"{parserName}: Invalid choice. Please input a valid integer in the range (0 - {resource['Services']}).")
             
-            # Assigns these variables to the appropriate 
+            # Assigns these variables to the appropriate value based on the selected service by the user
             parsedServiceName = resource["Services"][userServicechoice]["service_name"]
             parsedDescription = resource["Services"][userServicechoice]["description"]
             parsedUtils = resource["Services"][userServicechoice]["utilization"]
@@ -42,9 +46,9 @@ def parseInput(parserName, choice):
             parsedLocation = resource["CampusLocation"]
 
             # All parsed put into one String as an instruction for the AI
-            parsedIntruction = f"Resource name: {resourceName}. User selected service from the resource: {parsedServiceName}. Its description : {parsedDescription}. What it can be utilized for: {parsedUtils}. It's link: {parsedLink}. Number: {parsedNumber}. It's email: {parsedEmail}. It's hours {parsedOfficeHours}. It's campus location {parsedLocation}"
+            parsedIntruction = f"Resource name: {resourceName}. User selected service from resource: {parsedServiceName}. Its description: {parsedDescription}. Utilized for: {parsedUtils}. Link: {parsedLink}. Number: {parsedNumber}. Email: {parsedEmail}. Hours: {parsedOfficeHours}. Location: {parsedLocation}"
 
-            print(parsedIntruction)
+            print("".join(char for char in parsedIntruction if char not in "(){}[]\'\"").replace("..","."))
 
 
 def printServices(resource):

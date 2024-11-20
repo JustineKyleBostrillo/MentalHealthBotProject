@@ -4,11 +4,11 @@ import sys
 # The current range is 0 - 6
 def printMenu():
     print("----------MAIN MENU----------")
-    print("1: UTSA Counseling Service")
-    print("2: UTSA Wellness 360")
-    print("3: Program, Events & Training")
-    print("4: Recovery Support")
-    print("5: Close The Program")
+    print("0: UTSA Counseling Service")
+    print("1: UTSA Wellness 360")
+    print("2: Program, Events & Training")
+    print("3: Recovery Support")
+    print("4: Close The Program")
 
 
 if __name__ == "__main__":

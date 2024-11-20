@@ -4,7 +4,7 @@ UTSA Specialized Mental Health Bot: Creating an interactive AI model which can c
 
 Installation:"pip install -e ." In CMD 
 
-DO NOT CHANGE FILE NAMES OR DIRECTORY NAMES. IT WILL BREAK THE PROGRAM.
+IF YOU CHANGE THE FILE NAMES OR DIRECTORY NAMES, PLEASE CHANGE THEM ACCORDINGLY IN THE "config.json" TOO. IF YOU CHANGE "modules" MAKE SURE TO CHANGE IT INSIDE "main.py" TOO.
 
 Contributors: Justine Bostrillo, Joshua Martinez, Larry De Los Santos, Nicolas Ly  
 
