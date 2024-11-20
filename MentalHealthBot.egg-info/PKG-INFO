@@ -2,4 +2,7 @@ Metadata-Version: 2.1
 Name: MentalHealthBot
 Version: 1
 Requires-Dist: openai
+Requires-Dist: importlib
+Requires-Dist: pathlib
 Requires-Dist: requests
+Requires-Dist: datetime
