@@ -4,4 +4,7 @@ UTSA Specialized Mental Health Bot: Creating an interactive AI model which can c
 
 Installation:"pip install -e ." In CMD 
 
+DO NOT CHANGE FILE NAMES OR DIRECTORY NAMES. IT WILL BREAK THE PROGRAM.
+
 Contributors: Justine Bostrillo, Joshua Martinez, Larry De Los Santos, Nicolas Ly  
+

@@ -6,30 +6,30 @@
         {
             "service_name": "Individual Counseling",
             "description": "Going to college can be a time of growth and stress. Many students experience personal turmoil during this process and some come face to face with crisis and confusion. The Wellness 360 counseling staff is available to help students with any issue or concern that they may encounter. In a comfortable and confidential setting, students can examine issues such as gaining independence, managing new relationships, balancing academic stresses, or about making meaningful career decisions.",
-            "ultilization": ["Anxiety", "Depression", "Relationship Distress", "Eating Disorders", "Anger Management Issues", "OCD", "Alcohol/Substance Abuse", "Low Self-Esteem", "Coping With HIV Or Other STD's", "Self-defeating behaviors", "Sexual Problems", "Thoughts Of Harming Self Or Others"],
+            "utilization": ["Anxiety", "Depression", "Relationship Distress", "Eating Disorders", "Anger Management Issues", "OCD", "Alcohol/Substance Abuse", "Low Self-Esteem", "Coping With HIV Or Other STD's", "Self-defeating behaviors", "Sexual Problems", "Thoughts Of Harming Self Or Others"],
             "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#individual-counseling"
         },
         {
             "service_name": "Group Workshops",
             "description": "Group workshops is a great way meet new people, discuss the challenges you have been experiencing, and get a fresh perspective. By joining one of our groups, you will build support, learn about yourself, but most importantly, you will be reminded that you are not alone. Check out RowdyLink for more information and for links to attend.",
-            "ultilization": ["Mental Health Events (See Link For More Info)"],
+            "utilization": ["Mental Health Events (See Link For More Info)"],
             "link": "https://www.utsa.edu/students/wellbeing/services/group.html"
         },
         {
             "service_name": "Emergency Situations",
             "description": "If your situation is a crisis or emergency, and it is during business hours, please walk in to our office, at RWC 1.500, and indicate that you have emergency concerns. If you have a crisis or emergency after business hours, contact our helpline at 210-458-4140, select option 3.",
-            "ultilization": ["I am concerned about being able to stay safe or keep myself safe.", "I currently plan to kill or harm myself.", "I have taken steps to end my life in the last two weeks.", "I am afraid I might physically hurt someone else.", "I hear or see things others do not."],
+            "utilization": ["I am concerned about being able to stay safe or keep myself safe.", "I currently plan to kill or harm myself.", "I have taken steps to end my life in the last two weeks.", "I am afraid I might physically hurt someone else.", "I hear or see things others do not."],
             "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#emergency"
         },
         {
             "service_name": "Screening Services",
             "description": "The University of Texas at San Antonio offers a variety of screening and assessment services.",
-            "ultilization": ["Alcohol", "Anxiety", "Cannabis", "Eating Disorders", "Bipolar Disorder", "Post-Traumatic Stress Disorder (PTSD)", "Depression", "RX Drug Disorder"],
+            "utilization": ["Alcohol", "Anxiety", "Cannabis", "Eating Disorders", "Bipolar Disorder", "Post-Traumatic Stress Disorder (PTSD)", "Depression", "RX Drug Disorder"],
             "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#screening-services"
         }
     ],
     "ContactNumber": "210-458-4142",
-    "ContactEmail:": "wellbeing.education@utsa.edu",
+    "ContactEmail": "wellbeing.education@utsa.edu",
     "OfficeHours": [
         {"weekdays": "8:00am - 5:00pm"},
         {"weekends": "Closed"}
