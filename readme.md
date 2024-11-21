@@ -4,7 +4,7 @@ UTSA Specialized Mental Health Bot: Creating an interactive AI model which can c
 
 Installation: 
 1. Download The Latest Python Version 
-2. Download The Latest Release Of The Project
+2. Download The Latest Release Of The Project And Extract
 3. In The Root Folder "pip install -e ." In Command Prompt/Terminal 
 
 To Run: "python main.py" In The Root Folder
