@@ -1,0 +1,15 @@
+{
+    "Name": "Programs, Events and Training",
+    "RootLink": "https://wellness360.uthealthsa.org/wellness-360-at-utsa/",
+    "Info": "Our team, including Wellbeing Educators and a Prevention Specialist, provide a full calendar of programs, events and trainings to aid in students' awareness of the eight dimensions of wellbeing.",
+    "Services": [
+        {"service_name": "Various Events For WellBeing (See Link For More Information)"}
+    ],
+    "ContactNumber": "210-458-4142",
+    "ContactEmail": "wellbeing.education@utsa.edu",
+    "OfficeHours": [
+        {"weekdays": "8:00am - 5:00pm"},
+        {"weekends": "Closed"}
+    ],
+    "CampusLocation": "Recreation Wellness Center (RWC) 1.810. Main Campus. 1 UTSA Circle. San Antonio, TX 78249"
+}

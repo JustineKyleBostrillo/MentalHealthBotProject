@@ -1,25 +1,70 @@
 {
-    "Name": "Wellness 360 Counseling Services",
-    "RootLink": "https://www.utsa.edu/students/wellbeing/services/counseling.html",
-    "Description": "UTSA utilizes an integrated approach to student physical and mental health to promote student success and wellbeing. The Wellness 360 counseling center provides short-term individual counseling, group counseling, and psychiatry. To learn more or start services, please call 210-458-4142, and ask to schedule an in-person appointment. All of the counseling and mental health services offered by Wellness 360 are completely free for all registered UTSA students.",
+    "Name": "Wellness 360",
+    "RootLink": "https://wellness360.uthealthsa.org/wellness-360-at-utsa/",
+    "Info": "On-campus health care for UTSA students is provided by UT Health San Antonio Wellness 360. Our health care team is led by Advanced Practice Registered Nurses who hold the highest level degrees for nursing practice, master’s and doctoral degrees. Call 210-458-4142 to schedule an appointment.",
     "Services": [
         {
-            "service_name": "Individual Counseling",
-            "description": "Going to college can be a time of growth and stress. Many students experience personal turmoil during this process and some come face to face with crisis and confusion. The Wellness 360 counseling staff is available to help students with any issue or concern that they may encounter. In a comfortable and confidential setting, students can examine issues such as gaining independence, managing new relationships, balancing academic stresses, or about making meaningful career decisions.",
-            "utilization": ["Anxiety", "Depression", "Relationship Distress", "Eating Disorders", "Anger Management Issues", "OCD", "Alcohol/Substance Abuse", "Low Self-Esteem", "Coping With HIV Or Other STD's", "Self-defeating behaviors", "Sexual Problems", "Thoughts Of Harming Self Or Others"],
-            "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#individual-counseling"
+            "service_name": "Primary care services (e.g. cold, headache, sore throat, etc.)"
         },
         {
-            "service_name": "Group Workshops",
-            "description": "Group workshops is a great way meet new people, discuss the challenges you have been experiencing, and get a fresh perspective. By joining one of our groups, you will build support, learn about yourself, but most importantly, you will be reminded that you are not alone. ",
-            "utilization": ["Mental Health Events (See Link For More Info)"],
-            "link": "https://www.utsa.edu/students/wellbeing/services/group.html"
+            "service_name": "First Aid"
         },
         {
-            "service_name": "Screening Services",
-            "description": "The University of Texas at San Antonio offers a variety of screening and assessment services.",
-            "utilization": ["Alcohol", "Anxiety", "Cannabis", "Eating Disorders", "Bipolar Disorder", "Post-Traumatic Stress Disorder (PTSD)", "Depression", "RX Drug Disorder"],
-            "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#screening-services"
+            "service_name": "Prescriptions"
+        },
+        {
+            "service_name": "Health screening"
+        },
+        {
+            "service_name": "Immunizations / Vaccinations and Flu Shots"
+        },
+        {
+            "service_name": "Drug and Alcohol prevention"
+        },
+        {
+            "service_name": "Acute care (sprains, cuts)"
+        },
+        {
+            "service_name": "Chronic Conditions (such as Asthma)"
+        },
+        {
+            "service_name": "Health & Wellness Programs (such as health education and prevention)"
+        },
+        {
+            "service_name": "Information/literature on Health Topics"
+        },
+        {
+            "service_name": "Behavioral health (such as smoking cessation)"
+        }, 
+        {
+            "service_name": "Referral information"
+        },
+        {
+            "service_name": "Routine Health Assessments"
+        },
+        {
+            "service_name": "Screenings and Screening Events"
+        },
+        {
+            "service_name": "Diagnostic Urinalysis"
+        },
+        {
+            "service_name": "Diagnostic Bloodwork"
+        },
+        {
+            "service_name": "Comprehensive Women’s Health (such as pap smears, pregnancy testing, birth control and overall health)"
+        },
+        {
+            "service_name": "LGBTQ+ Health Care Services"
+        },
+        {
+            "service_name": "PrEP/PEP"
+        },
+        {
+            "service_name": "Nutrition / Fitness Education and Counseling"
+        },
+        {
+            "service_name": "Mental Health"
         }
     ],
     "ContactNumber": "210-458-4142",
@@ -28,13 +73,5 @@
         {"weekdays": "8:00am - 5:00pm"},
         {"weekends": "Closed"}
     ],
-    "CampusLocation": "Recreation Wellness Center (RWC) 1.810. Main Campus. 1 UTSA Circle. San Antonio, TX 78249",
-    "ExcludedServices": [
-    {
-        "service_name": "Emergency Situations",
-        "description": "If your situation is a crisis or emergency, and it is during business hours, please walk in to our office, at RWC 1.500, and indicate that you have emergency concerns. If you have a crisis or emergency after business hours, contact our helpline at 210-458-4140, select option 3.",
-        "utilization": ["I am concerned about being able to stay safe or keep myself safe.", "I currently plan to kill or harm myself.", "I have taken steps to end my life in the last two weeks.", "I am afraid I might physically hurt someone else.", "I hear or see things others do not."],
-        "link": "https://www.utsa.edu/students/wellbeing/services/counseling.html#emergency"
-    }]
-
+    "CampusLocation": "Recreation and Wellness Center, 1.500. One UTSA Circle, San Antonio, TX 78249"
 }

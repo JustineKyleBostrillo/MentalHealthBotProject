@@ -8,7 +8,8 @@ def printMenu():
     print("1: UTSA Wellness 360")
     print("2: Program, Events & Training")
     print("3: Recovery Support")
-    print("4: Close The Program")
+    print("4: Peace Program")
+    print("5: Close The Program")
 
 
 if __name__ == "__main__":

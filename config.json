@@ -4,7 +4,11 @@
 
 
     "mainPythonFile": "main.py",
+    "AIconfig": "AIconfig.json",
+    "universalInstruction": "universalInstruction.json",
 
+    "parserName": "Dipper Pines",
+    "AIName": "Mabel Pines",
     "EpensiveMode": false,
     "ExtraInstructionForExpensiveMode": ""
 }

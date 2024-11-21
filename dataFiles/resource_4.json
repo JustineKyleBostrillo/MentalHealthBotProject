@@ -1,34 +1,19 @@
 {
-    "Name": "Recovery Support Services",
-    "RootLink": "https://www.utsa.edu/students/wellbeing/services/recovery.html",
-    "Description": "The Recovery Center offers students recovering from substance use disorders and/or other behavioral addictions the environment necessary to maintain your recovery while receiving your education. We provide support meetings, physical lounge/community room, a supportive community, one on one services, plus a few other perks.",
+    "Name": "The PEACE Center",
+    "RootLink": "https://www.utsa.edu/peacecenter/",
+    "Info": "Prevention, Education, Advocacy, Consultation, Empowerment. The PEACE Center leads our campus community in a social change movement to end sexual violence. Our trauma-informed educational programs and direct services aim to promote a healthy and safe environment allowing all faculty, staff, and students to thrive.",
     "Services": [
         {
-            "service_name": "Community Approach",
-            "description": "We believe recovery is a deeply personal process and therefore, we respect all recovery paths. We are a community that respects and celebrates all races, ethnicities, cultures, religions, beliefs, sexualities, genders, life circumstances or experiences. In this community, we grow together."
-        },
-        {
-            "service_name": "Recovery Lounge",
-            "description": "Find your home on campus in our Recovery Lounge where you can relax, study, hang out, or grab some coffee, snacks and other refreshments. During recovery support meetings, open to meeting attendees only."
-        },
-        {
-            "service_name": "Sober social activities",
-            "description": "Engaging in social connection is crucial to recovery. Social activities include sober tailgates, bowling nights, game nights, etc."
-        },
-        {
-            "service_name": "Recovery counseling/coaching",
-            "description": "Maintaining recovery can be challenging on its own. Maintaining recovery while in college, even more so. Students in recovery can request to meet with CCR’s licensed staff to help maintain recovery through short term individual counseling based on student needs."
-        },
-        {
-            "service_name": "Recovery Support Groups",
-            "description": "See Link For More Information And Schedule"
+            "service_name": "Education",
+            "description": "UTSA PEACE Center provides support services and prevention education to those who have been impacted by sexual violence. Our services are confidential and for the entire campus community",
+            "ultilization": ["Education in", "Sexual Violence", "Intimate Partner Violence", "Gender-based Violence", "Sexual Misconduct and Harassment", "Stalking"]
         }
     ],
-    "ContactNumber": "210-458-4142",
-    "ContactEmail:": "wellbeing.education@utsa.edu",
+    "ContactNumber": "(210)458-4985",
+    "ContactEmail": "peace.center@utsa.edu",
     "OfficeHours": [
         {"weekdays": "8:00am - 5:00pm"},
         {"weekends": "Closed"}
     ],
-    "CampusLocation": "Recreation Wellness Center (RWC) 1.810. Main Campus. 1 UTSA Circle. San Antonio, TX 78249"
+    "CampusLocation": "Student Union - SU 1.02.22. One UTSA Circle. San Antonio, TX 78249"
 }

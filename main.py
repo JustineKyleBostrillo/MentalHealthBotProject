@@ -1,20 +1,22 @@
 import datetime
 import json
-from openAI import AI
-
 
 from modules import parseUserInput
 from modules import menu
 from modules import clearConsole
+
+from openAI import AI
 
 
 
 date = datetime.datetime.now()
 
 
-# The name of the parser and the preferredName of the user
-parserName = "Apollo"
-userName = input(f"{parserName}: Hello there beautiful stranger, who may I refer you as? ")
+# The name of the parser, the AI, and the preferredName of the user
+with open("config.json", "r") as file:
+    config = json.load(file)
+parserName = config["parserName"]
+userName = input(f"{parserName}: Hey! I don't think we've met yet—I'm {parserName}! What's your name? ")
 
 # Clears Console
 clearConsole.doClear()
@@ -32,15 +34,17 @@ choice = 0
 # The main while loop that runs the program
 while(choice != 5):
     try:
-        print(f"{parserName}: Please choose one: ")
+        print(f"{parserName}: Please select one: ")
         menu.printMenu()
         choice = int(input(f"{userName}: "))
     except:
-        print(f"{parserName}: Invalid choice. Please input a valid integer in the range (0 - 4).")
+        print(f"{parserName}: That's not a choice. Please put in a number between 0 and 5")
     
     match(choice):
-        case 1:
-            parseUserInput.parseInput(parserName,choice)
+        # If case is 0, 1, 2, 3, 4 
+        case 0 | 1 | 2| 3 | 4:
+            instruction = parseUserInput.parseInput(parserName,userName,choice)
+            AI.CHATBOT(instruction, userName).runBot()
         case 5:
             print(f"{parserName}: Goodbye, {userName}, See you later!")
         case _:
