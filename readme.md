@@ -2,7 +2,10 @@ AIS PROJECT
 
 UTSA Specialized Mental Health Bot: Creating an interactive AI model which can connect to students on campus struggling with mental health with professionals; as well as give general advice. Both in a physical world and the we world
 
-Installation: 1. Download The Latest Python Version 2. "pip install -e ." In Command Prompt/Terminal 
+Installation: 
+1. Download The Latest Python Version 
+2. Download The Latest Release Of The Project
+3. In The Root Folder "pip install -e ." In Command Prompt/Terminal 
 
 To Run: "python main.py" In The Root Folder
 

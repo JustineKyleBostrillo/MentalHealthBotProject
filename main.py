@@ -22,7 +22,7 @@ userName = input(f"{parserName}: Hey! I don't think we've met yet—I'm {parserN
 clearConsole.doClear()
 
 # Greets the user based on time
-if(date.hour > 0 and date.hour < 12):
+if(date.hour > 4 and date.hour < 12):
     print(f"{parserName}: Good morning, {userName}, and welcome! Here are the resources we can assist you with: ")
 elif(date.hour >= 12 and date.hour <= 18):
     print(f"{parserName}: Good afternoon, {userName}, and welcome! Here are the resources we can assist you with: ")
@@ -42,7 +42,7 @@ while(choice != 5):
     
     match(choice):
         # If case is 0, 1, 2, 3, 4 
-        case 0 | 1 | 2| 3 | 4:
+        case 0 | 1 | 2 | 3 | 4:
             instruction = parseUserInput.parseInput(parserName,userName,choice)
             AI.CHATBOT(instruction, userName).runBot()
         case 5:
