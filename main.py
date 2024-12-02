@@ -4,6 +4,7 @@ import json
 from modules import parseUserInput
 from modules import menu
 from modules import clearConsole
+from modules import countResources
 
 from openAI import AI
 
@@ -31,8 +32,11 @@ else:
 
 choice = 0
 
+# Gets the number of resources
+numOfResources = countResources.countResourceFiles()
+
 # The main while loop that runs the program
-while(choice != 5):
+while(choice != numOfResources):#Num of resources is also exit
     try:
         print(f"{parserName}: Please select one: ")
         menu.printMenu()
@@ -40,12 +44,12 @@ while(choice != 5):
     except:
         print(f"{parserName}: That's not a choice. Please put in a number between 0 and 5")
     
-    match(choice):
-        # If case is 0, 1, 2, 3, 4 
-        case 0 | 1 | 2 | 3 | 4:
-            instruction = parseUserInput.parseInput(parserName,userName,choice)
-            AI.CHATBOT(instruction, userName).runBot()
-        case 5:
-            print(f"{parserName}: Goodbye, {userName}, See you later!")
-        case _:
-            print(f"{parserName}: Not in the valid range, please try again")
+
+    if(choice in range(numOfResources)):     
+        instruction = parseUserInput.parseInput(parserName,userName,choice)
+        AI.CHATBOT(instruction, userName).runBot()
+    elif(choice == numOfResources):
+        print(f"{parserName}: Goodbye, {userName}, See you later!")
+    else:
+        print(f"{parserName}: Not in the valid range, please try again")
+

@@ -33,7 +33,8 @@ class CHATBOT:
         self.userName = userName
         self.model = config["model"]
         self.name = config["name"]
-        self.instructions = (f"{self.uInstruction['Instruction']}. You play the character: {self.name}. Here is the user selected resource: {self.instruction}")
+        self.characterCtx = config["characterContext"]
+        self.instructions = (f"{self.uInstruction['Instruction']}. You play the character: {self.name}. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
         # Initialize openAI
         openai.api_key = self.getAPIKey()
         self.client = self.createClient()
