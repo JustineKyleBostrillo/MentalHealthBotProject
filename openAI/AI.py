@@ -126,14 +126,13 @@ class CHATBOT:
         print(f"Thread ID: {self.thread.id}\n")
 
         sleep(4)
-        # print(f"{self.name}: Hello there! How may I assist you?")
         try:
-            self.createMessage(f"Summarize: {self.instructions} and ask the user if there's any question")
+            self.createMessage(f"Summarize: {self.instructions} and ask the user if they have question")
             self.createRun()
             sleep(5)
             self.printAIResponse()
-        except:
-            print("An error occured")
+        except Exception as e:
+            print(f"An error occured: {e}")
         while True:
             userInput = input(f"{self.userName}: ")
             if(userInput.lower() == "exit"):

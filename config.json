@@ -9,6 +9,6 @@
 
     "parserName": "Dipper Pines",
     "AIName": "Mabel Pines",
-    "EpensiveMode": false,
+    "ExpensiveMode": false,
     "ExtraInstructionForExpensiveMode": ""
 }

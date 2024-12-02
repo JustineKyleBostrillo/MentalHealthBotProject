@@ -25,7 +25,7 @@ def parseInput(parserName, userName, choice):
                 userServicechoice = int(input(f"{userName}: "))
             except:
                 print(f"{parserName}: Invalid choice. Please input a valid integer in the range (0 - {len(resource['Services'])}).")
-    rawInstruction = f"Resource Name: {resource['Name']}. Info about the resource: {resource['Info']}. Number: {resource['ContactNumber']}. Email: {resource['ContactEmail']}. When it is open: {resource['OfficeHours']}. Campus location: {resource['CampusLocation']}. Limit words around 150"#Temp fix (Fix in AIconfig)
+    rawInstruction = f"Resource Name: {resource['Name']}. Info about the resource: {resource['Info']}. Number: {resource['ContactNumber']}. Email: {resource['ContactEmail']}. When it is open: {resource['OfficeHours']}. Campus location: {resource['CampusLocation']}. "
     for key, value in resource["Services"][userServicechoice].items():
         rawInstruction += (f"{key}: {value}. ")
     instruction = ''.join(c for c in rawInstruction if c not in "()[]\'\"").replace("..", ".")
