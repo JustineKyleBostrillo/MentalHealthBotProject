@@ -5,6 +5,10 @@ import pathlib
 import sys
 from time import sleep
 from modules import clearConsole
+from modules import parseOpenAIKey
+
+
+
 
 # Gets the root directory of the project
 # Gets the dataFileFolder directory
@@ -43,19 +47,21 @@ class CHATBOT:
 
 
     # The Class's own functions (These are private functions)
-    # Gets API Key from environment 
+    # Gets API Key 
     def getAPIKey(self):
         try:
-            return(os.getenv("OPENAI_API_KEY"))
+            # return(os.getenv("OPENAI_API_KEY"))
+            return(parseOpenAIKey.getAPIKey())
         except:
-            print("Something went wrong getting the environment 'OPENAI_API_KEY' value")
+            print("Something went wrong getting openAI API Key")
 
     # Creates the client
     def createClient(self):
         try:
             return(openai.OpenAI())
-        except:
-            print("Something went wrong creating openAI client")
+        except Exception as e:
+            print(f"Something went wrong creating openAI client. Maybe you put in the wrong key in 'config.json'. After editing, please restart your device and start again. ERROR: {e}" )
+            exit(1)
     
     # Creates assistant
     def createAssistant(self):
@@ -67,12 +73,14 @@ class CHATBOT:
             return(assistant)
         except Exception as e:
             print(f"Something went wrong creating the openAI assistant: {e}")
+            exit(1)
         
     def createThread(self):
         try:
             return(self.client.beta.threads.create())
-        except:
-            print("Something went wrong creating the thread")
+        except Exception as e:
+            print(f"Something went wrong creating the thread: {e}")
+            exit(1)
 
     def createMessage(self, message):
         
@@ -120,7 +128,7 @@ class CHATBOT:
         # Warns the user
         print(f"WARNING! YOU ARE ABOUT TO CONVERSE WITH A LLM")
         print("IF YOU NEED SERIOUS HELP, IT IS IMPORTANT TO GO SEE A PROFESSIONAL")
-        print("TYPE \"exit\" TO GO BACK TO MENU")
+        print("TYPE \"exit\" TO GO BACK TO MENU. WAIT (5s)")
         # Print Thread Info
         print(f"\nAssistant: {self.assistant.id}")
         print(f"Thread ID: {self.thread.id}\n")

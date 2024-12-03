@@ -10,5 +10,7 @@
     "parserName": "Dipper Pines",
     "AIName": "Mabel Pines",
     "ExpensiveMode": false,
-    "ExtraInstructionForExpensiveMode": ""
+    "ExtraInstructionForExpensiveMode": "",
+
+    "openAIKey": "UTSA"
 }
