@@ -1,0 +1,19 @@
+{
+    "Name": "",
+    "RootLink": "",
+    "Info": "",
+    "Services": [
+        {
+            "service_name": "",
+            "description": "",
+            "ultilization": [""]
+        }
+    ],
+    "ContactNumber": "",
+    "ContactEmail": "",
+    "OfficeHours": [
+        {"weekdays": ""},
+        {"weekends": ""}
+    ],
+    "CampusLocation": ""
+}
