@@ -1,11 +1,11 @@
 [project]
 name = "MentalHealthBot"
 version = "v1"
-dependencies = ["openai","importlib", "pathlib", "requests", "datetime", "speechrecognition", "pyaudio", "pyttsx3", "gTTS"]
+dependencies = ["openai","importlib", "pathlib", "datetime", "gTTS"]
 
 [build-system]
 requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["scheduleParser"]
+py-modules = []

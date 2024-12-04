@@ -4,5 +4,5 @@ Version: 1
 Requires-Dist: openai
 Requires-Dist: importlib
 Requires-Dist: pathlib
-Requires-Dist: requests
 Requires-Dist: datetime
+Requires-Dist: gTTS

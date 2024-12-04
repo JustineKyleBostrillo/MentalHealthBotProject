@@ -1,5 +1,5 @@
 openai
 importlib
 pathlib
-requests
 datetime
+gTTS
