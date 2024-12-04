@@ -36,9 +36,9 @@ class CHATBOT:
         self.instruction = instruction
         self.userName = userName
         self.model = config["model"]
-        self.name = config["name"]
+        self.name = "Friendly Chatbot"
         self.characterCtx = config["characterContext"]
-        self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. You play the character: {self.name}. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
+        self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. Here is the user selected resource: {self.instruction}")
         # Initialize openAI
         openai.api_key = self.getAPIKey()
         self.client = self.createClient()
@@ -113,14 +113,14 @@ class CHATBOT:
         except:
             print("Something went wrong retrieving the latest run")
     
-    def printAIResponse(self):
+    def outputAIResponse(self):
         messages = self.client.beta.threads.messages.list(
                         thread_id = self.thread.id
                     )
         for message in messages.data:
             if message.role == "assistant":
                 print(f"\n{self.name}: {message.content[0].text.value}")
-                message = txSp(text =  message.content[0].text.value, lang = "en", slow = False)
+                message = txSp(text =  message.content[0].text.value, lang = self.language, slow = False)
                 message.save("message.mp3")
                 os.system("start message.mp3")
 
@@ -142,7 +142,7 @@ class CHATBOT:
             self.createMessage(f"Summarize: {self.instructions} and ask the user if they have question")
             self.createRun()
             sleep(5)
-            self.printAIResponse()
+            self.outputAIResponse()
         except Exception as e:
             print(f"An error occured: {e}")
         while True:
@@ -158,7 +158,7 @@ class CHATBOT:
             while run.status in ["queued", "in_progress"]:
                 run = self.retrieveRun(run)
                 if(run.status == "completed"):
-                    self.printAIResponse()
+                    self.outputAIResponse()
                     break
                 else:
                     print(".", end="", flush=True)
