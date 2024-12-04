@@ -10,8 +10,7 @@
     "AIconfig": "AIconfig.json",
     "universalInstruction": "universalInstruction.json",
 
-    "parserName": "Dipper Pines",
-    "AIName": "Mabel Pines",
+    "parserName": "Appointer",
     "ExpensiveMode": false,
     "ExtraInstructionForExpensiveMode": "",
 

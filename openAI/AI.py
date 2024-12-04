@@ -3,6 +3,8 @@ import os
 import openai
 import pathlib
 import sys
+import random
+
 from time import sleep
 from modules import clearConsole
 from modules import parseOpenAIKey
@@ -36,9 +38,12 @@ class CHATBOT:
         self.instruction = instruction
         self.userName = userName
         self.model = config["model"]
-        self.name = config["name"]
+        self.names = config["characters"]
+        self.name = self.names[random.randint(0,len(self.names) - 1)]
         self.characterCtx = config["characterContext"]
-        self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. You play the character: {self.name}. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
+        self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. You play the character(s): {self.names}. Number of characters: {len(self.names)}. If there are more than one character all characters are in the same room. Don't switch characters unless stated otherwise. Right now play {self.name}. When asked for introduction, introduce all characters. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
+        
+        
         # Initialize openAI
         self.client = self.createClient()
         self.assistant = self.createAssistant()
@@ -95,8 +100,8 @@ class CHATBOT:
     def createRun(self):
         try:
             run = self.client.beta.threads.runs.create(
-                thread_id=self.thread.id,
-                assistant_id=self.assistant.id
+                thread_id = self.thread.id,
+                assistant_id = self.assistant.id,
             )
             return(run)
         except:
@@ -119,7 +124,27 @@ class CHATBOT:
         for message in messages.data:
             if message.role == "assistant":
                 print(f"\n{self.name}: {message.content[0].text.value}")
+                
                 break
+    def randomInt(self):
+        return(random.randint(0, len(self.names) - 1))
+        
+    def forcedSwitch(self):
+        if(len(self.names) == 1):
+            return
+        else:
+            randomNum = self.randomInt()
+            while(self.names[randomNum] == self.name):
+                randomNum = self.randomInt()
+            self.name = self.names[randomNum]
+
+    def response(self):
+        self.previousChar = self.name
+        self.forcedSwitch()
+        self.createMessage(f"You are responding as {self.name}. Response to what the previous character said. Previous character was {self.previousChar}")
+        self.createRun()
+        sleep(4)
+        self.printAIResponse()
 
     def runBot(self):
         # Clears the console
@@ -141,7 +166,7 @@ class CHATBOT:
         except Exception as e:
             print(f"An error occured: {e}")
         while True:
-            userInput = input(f"{self.userName}: ")
+            userInput = input(f"\n{self.userName}: ")
             if(userInput.lower() == "exit"):
                 break
             try:            
@@ -154,6 +179,7 @@ class CHATBOT:
                 run = self.retrieveRun(run)
                 if(run.status == "completed"):
                     self.printAIResponse()
+                    self.response()
                     break
                 else:
                     print(".", end="", flush=True)

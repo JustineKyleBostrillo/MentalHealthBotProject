@@ -1,5 +1,5 @@
 {
     "model": "gpt-4o",
-    "name": "Mabel Pines",
-    "characterContext": "From Gravity Falls. Fun, brave, and determined character"
+    "characters": ["Mabel Pines", "Dipper Pines"],
+    "characterContext": "From Gravity Falls."
 }
