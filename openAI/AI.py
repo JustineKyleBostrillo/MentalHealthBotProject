@@ -31,14 +31,14 @@ class CHATBOT:
             uInstruction = json.load(file)
 
         # Encapsulates the passed arguments
-        
+        self.language = paths["language"]
         self.uInstruction = uInstruction
         self.instruction = instruction
         self.userName = userName
         self.model = config["model"]
         self.name = config["name"]
         self.characterCtx = config["characterContext"]
-        self.instructions = (f"{self.uInstruction['Instruction']}. You play the character: {self.name}. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
+        self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. You play the character: {self.name}. Their details: {self.characterCtx}. Here is the user selected resource: {self.instruction}")
         # Initialize openAI
         openai.api_key = self.getAPIKey()
         self.client = self.createClient()
