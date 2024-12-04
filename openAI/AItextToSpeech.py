@@ -40,7 +40,6 @@ class CHATBOT:
         self.characterCtx = config["characterContext"]
         self.instructions = (f"{self.uInstruction['Instruction']}. Language: {self.language}. Here is the user selected resource: {self.instruction}")
         # Initialize openAI
-        openai.api_key = self.getAPIKey()
         self.client = self.createClient()
         self.assistant = self.createAssistant()
         self.thread = self.createThread()
@@ -58,7 +57,7 @@ class CHATBOT:
     # Creates the client
     def createClient(self):
         try:
-            return(openai.OpenAI())
+            return(openai.OpenAI(api_key = self.getAPIKey()))
         except Exception as e:
             print(f"Something went wrong creating openAI client. Maybe you put in the wrong key in 'config.json'. After editing, please restart your device and start again. ERROR: {e}" )
             exit(1)
