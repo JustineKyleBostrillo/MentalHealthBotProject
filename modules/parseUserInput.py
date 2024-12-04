@@ -3,7 +3,7 @@
 import json
 import pathlib
 import sys
-
+ 
 
 # Gets the root directory of the project as well as where all the json files are (In dataFiles directory)
 rootDir = pathlib.Path(__file__).parents[1]
@@ -20,7 +20,7 @@ def parseInput(parserName, userName, choice):
         userServicechoice = -1
         while(userServicechoice > (len(resource["Services"]) - 1) or (userServicechoice < 0)):
             try:
-                print(f"{parserName}: Please choose one: ")
+                print(f"{parserName}: Please choose one of the service(s): ")
                 printServices(resource)
                 userServicechoice = int(input(f"{userName}: "))
             except:

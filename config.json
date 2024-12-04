@@ -10,7 +10,7 @@
     "AIconfig": "AIconfig.json",
     "universalInstruction": "universalInstruction.json",
 
-    "parserName": "Appointer",
+    "parserName": "Hygieia",
     "ExpensiveMode": false,
     "ExtraInstructionForExpensiveMode": "",
 

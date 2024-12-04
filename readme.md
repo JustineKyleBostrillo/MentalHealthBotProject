@@ -12,7 +12,7 @@ To Run: "python main.py" In The Root Folder
 
 If You Change The File Names or Directory Names, Make Sure That They Are Also Changed In "config.json". Changing "modules" Name Will Result In A Broken Program; You Have To Edit "main.py."
 
-To Change The AI's Character, Just go to "AIconfig.json" in the dataFiles folder and edit the value of the key "name"
+To Change The AI's Character, Just go to "AIconfig.json" in the dataFiles folder and edit the values of the key "characters". Add Character Context if necessary
 
 Contributors: Justine Bostrillo, Joshua Martinez, Larry De Los Santos, Nicolas Ly  
 

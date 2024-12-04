@@ -6,7 +6,6 @@ from modules import menu
 from modules import clearConsole
 from modules import countResources
 
-from openAI import AI
 from openAI import AItextToSpeech
 
 
@@ -17,7 +16,8 @@ date = datetime.datetime.now()
 with open("config.json", "r") as file:
     config = json.load(file)
 parserName = config["parserName"]
-userName = input(f"{parserName}: Hey! I don't think we've met yet—I'm {parserName}! What's your name? ")
+clearConsole.doClear()
+userName = input(f"{parserName}: Hey! I don't think we've met yet, I'm {parserName}! What's your name? ")
 
 # Clears Console
 clearConsole.doClear()

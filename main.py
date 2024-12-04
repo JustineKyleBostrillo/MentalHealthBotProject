@@ -17,7 +17,8 @@ date = datetime.datetime.now()
 with open("config.json", "r") as file:
     config = json.load(file)
 parserName = config["parserName"]
-userName = input(f"{parserName}: Hey! I don't think we've met yet—I'm {parserName}! What's your name? ")
+clearConsole.doClear()
+userName = input(f"{parserName}: Hey! I don't think we've met yet, I'm {parserName}! What's your name? ")
 
 # Clears Console
 clearConsole.doClear()
@@ -25,7 +26,7 @@ clearConsole.doClear()
 # Greets the user based on time
 if(date.hour > 4 and date.hour < 12):
     print(f"{parserName}: Good morning, {userName}, and welcome! Here are the resources we can assist you with: ")
-elif(date.hour >= 12 and date.hour <= 18):
+elif(date.hour >= 12 and date.hour < 18):
     print(f"{parserName}: Good afternoon, {userName}, and welcome! Here are the resources we can assist you with: ")
 else:
     print(f"{parserName}: Good evening, {userName}, and welcome! Here are the resources we can assist you with ")
