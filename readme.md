@@ -6,6 +6,7 @@ Installation:
 1. Download The Latest Python Version 
 2. Download The Latest Release Of The Project And Extract
 3. In The Root Folder "pip install -e ." In Command Prompt/Terminal 
+4. In The Root Folder "py main.py", "py textToSpeechMainDemo.py" or "python main.py", "py textToSpeechMainDemo.py" In Command Prompt/Terminal depending on the environment path name of python
 
 To Run: "python main.py" In The Root Folder
 
