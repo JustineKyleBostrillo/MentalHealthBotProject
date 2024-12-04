@@ -1,70 +1,55 @@
-import speech_recognition as spTx #Speech to text
-import pyttsx3 
-import os
-from gtts import gTTS as txSp #Text to speech
+import datetime
+import json
+
+from modules import parseUserInput
+from modules import menu
+from modules import clearConsole
+from modules import countResources
+
+from openAI import AI
+from openAI import AItextToSpeech
 
 
+date = datetime.datetime.now()
 
-welcomeText = '(This is a demo!) Hi there! How may I help you?'
 
-# Language in which you want to convert
-language = 'en'
+# The name of the parser, the AI, and the preferredName of the user
+with open("config.json", "r") as file:
+    config = json.load(file)
+parserName = config["parserName"]
+userName = input(f"{parserName}: Hey! I don't think we've met yet—I'm {parserName}! What's your name? ")
 
-# Passing the text and language to the engine, 
-# here we have marked slow=False. Which tells 
-# the module that the converted audio should 
-# have a high speed
-myobj = txSp(text=welcomeText, lang=language, slow=False)
+# Clears Console
+clearConsole.doClear()
 
-# Saving the converted audio in a mp3 file named
-# welcome 
-myobj.save("welcome.mp3")
+# Greets the user based on time
+if(date.hour > 4 and date.hour < 12):
+    print(f"{parserName}: Good morning, {userName}, and welcome! Here are the resources we can assist you with: ")
+elif(date.hour >= 12 and date.hour <= 18):
+    print(f"{parserName}: Good afternoon, {userName}, and welcome! Here are the resources we can assist you with: ")
+else:
+    print(f"{parserName}: Good evening, {userName}, and welcome! Here are the resources we can assist you with ")
 
-# Playing the converted file
-os.system("start welcome.mp3")
+choice = 0
 
-# Python program to translate
-# speech to text and text to speech
+# Gets the number of resources
+numOfResources = countResources.countResourceFiles()
 
-# Initialize the recognizer 
-r = spTx.Recognizer() 
-
-# Function to convert text to
-# speech
-def SpeakText(command):
-    
-    # Initialize the engine
-    engine = pyttsx3.init()
-    engine.say(command) 
-    engine.runAndWait()
-    
-    
-# Loop infinitely for user to
-# speak
-
-while(1):    
-    
-    # Exception handling to handle
-    # exceptions at the runtime
+# The main while loop that runs the program
+while(choice != numOfResources):#Num of resources is also exit
     try:
-        # use the microphone as source for input.
-        with spTx.Microphone() as source1:
-            
-            # wait for a second to let the recognizer
-            # adjust the energy threshold based on
-            # the surrounding noise level 
-            r.adjust_for_ambient_noise(source1, duration=0.2)
-            
-            #listens for the user's input 
-            audio2 = r.listen(source1)
-            
-            # Using google to recognize audio
-            MyText = r.recognize_google(audio2)
-            MyText = MyText.lower()
-            SpeakText(MyText)
-            
-    except spTx.RequestError as e:
-        print(e)
-        
-    except spTx.UnknownValueError:
-        print(spTx.UnknownValueError)
+        print(f"{parserName}: Please select one: ")
+        menu.printMenu()
+        choice = int(input(f"{userName}: "))
+    except:
+        print(f"{parserName}: That's not a choice. Please put in a number between 0 and 5")
+    
+
+    if(choice in range(numOfResources)):     
+        instruction = parseUserInput.parseInput(parserName,userName,choice)
+        AItextToSpeech.CHATBOT(instruction, userName).runBot()
+    elif(choice == numOfResources):
+        print(f"{parserName}: Goodbye, {userName}, See you later!")
+    else:
+        print(f"{parserName}: Not in the valid range, please try again")
+
